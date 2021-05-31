@@ -20,7 +20,12 @@ class Rule:
 
 
 class GrammarParser(Parser):
-
+    """
+        grammar: rule+ ENDMARKER
+        rule: NAME ':' alternative ('|' alternative)* NEWLINE
+        alternative: item+
+        item: NAME | STRING
+    """
     def grammar(self):
         pos = self.mark()
         if rule := self.rule():
