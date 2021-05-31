@@ -1,0 +1,4 @@
+grammar: rule+ ENDMARKER
+rule: NAME ':' alternative ('|' alternative)* NEWLINE
+alternative: item+
+item: NAME | STRING
