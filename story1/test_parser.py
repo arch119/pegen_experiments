@@ -41,3 +41,7 @@ def test_toy():
     assert tree and tree.type == "sub"
     assert tree.children[0].type == NAME
     assert tree.children[1].type == "add"
+
+if __name__ == "__main__":
+    test_basic()
+    test_toy()
